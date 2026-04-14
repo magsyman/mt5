@@ -25,6 +25,7 @@ class RejectionStage(str, Enum):
 class RejectionReason(str, Enum):
     INVALID_SIGNAL = "invalid_signal"
     STALE_SIGNAL = "stale_signal"
+    STALE_MARKET_DATA = "stale_market_data"
     INVALID_SYMBOL = "invalid_symbol"
     SYMBOL_NOT_TRADEABLE = "symbol_not_tradeable"
     NO_MARKET_DATA = "no_market_data"

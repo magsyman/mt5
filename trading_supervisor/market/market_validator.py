@@ -43,7 +43,7 @@ def validate_market(input: MarketValidationInput) -> ValidationResult:
     if age_seconds > settings.max_signal_age_seconds:
         return ValidationResult(
             success=False,
-            rejection_reason=RejectionReason.STALE_SIGNAL,
+            rejection_reason=RejectionReason.STALE_MARKET_DATA,
             rejection_stage=RejectionStage.MARKET_VALIDATION,
             thresholds_used={"max_tick_age_seconds": float(settings.max_signal_age_seconds)},
             details={"symbol": resolved, "age_seconds": float(age_seconds)},

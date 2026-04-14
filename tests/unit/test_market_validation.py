@@ -82,7 +82,7 @@ def test_validate_market_stale_tick() -> None:
     )
     r = validate_market(inp)
     assert r.success is False
-    assert r.rejection_reason == RejectionReason.STALE_SIGNAL
+    assert r.rejection_reason == RejectionReason.STALE_MARKET_DATA
     assert r.rejection_stage == RejectionStage.MARKET_VALIDATION
 
 
